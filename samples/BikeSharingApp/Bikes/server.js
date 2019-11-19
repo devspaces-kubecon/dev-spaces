@@ -273,7 +273,7 @@ app.delete('/api/bikes/:bikeId', function(req, res) {
 app.patch('/api/bikes/:bikeId/reserve', function(req, res) {
     var requestID = req.header(requestIDHeaderName);
     if (!req.params.bikeId) {
-        res.status(400).send('Must specify bikeId');
+        res.status(400).send('Must specify bikeId!');
         return;
     }
 
