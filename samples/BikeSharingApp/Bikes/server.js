@@ -227,9 +227,10 @@ app.get('/api/bikes/:bikeId', function(req, res) {
             bikeDoesNotExist(res, req.params.bikeId);
             return;
         }
-
-        // Hard code image url *FIX ME*
-        theBike.imageUrl = "/static/logo.svg";
+        
+        var theBike = result;
+        theBike.id = theBike_id;
+        delete theBike_id;
         
         res.send(theBike);
     });
