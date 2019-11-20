@@ -228,6 +228,8 @@ app.get('/api/bikes/:bikeId', function(req, res) {
             return;
         }
 
+        //it looks like it was already removed???
+        
         var theBike = result;
         theBike.id = theBike._id;
         delete theBike._id;
