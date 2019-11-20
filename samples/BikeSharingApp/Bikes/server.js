@@ -389,6 +389,7 @@ async.retry({times: 10, interval: 1000}, tryMongoConnect, function(err, result) 
         process.exit(1);
     }
 
+    
     console.log("Connected to MongoDB");
     mongoDB = result;
     mongoDB.on('close', function() {
