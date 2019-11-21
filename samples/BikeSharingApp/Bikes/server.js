@@ -228,8 +228,8 @@ app.get('/api/bikes/:bikeId', function(req, res) {
             return;
         }
 
-        // Hard code inage url *FIX ME*
-        theBike.imageUrl="/static/logo.svg";
+//         // Hard code inage url *FIX ME*
+//         theBike.imageUrl="/static/logo.svg";
         
         res.send(theBike);
     });
