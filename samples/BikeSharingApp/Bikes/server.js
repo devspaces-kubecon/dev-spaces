@@ -223,6 +223,7 @@ app.get('/api/bikes/:bikeId', function(req, res) {
             dbError(res, err, requestID);
             return;
         }
+        
         if (!result) {
             bikeDoesNotExist(res, req.params.bikeId);
             return;
